@@ -1,0 +1,46 @@
+#Loga {
+	background-color: green;
+}
+
+body.gruppSelected {
+	background-color: red;
+}
+body.andreas_aSelected {
+	background-color: Purple;
+}
+body.andreas_hSelected {
+	background-color: Blue;
+}
+body.victorSelected {
+	background-color: Orange;
+}
+body.JimmySelected {
+	background-color: Pink;
+}
+.clickable_menu_item {
+	width: 200px;
+	height: 100px;
+	display:inline-block;
+	color: black;
+	text-decoration: none;
+}
+
+#Andreas_Antonsson
+{
+	background-color:Purple;
+}
+
+#Andreas_Hellstrom
+{
+	background-color:Blue;
+}
+
+#Victor
+{
+	background-color:Orange;
+}
+
+#Jimmy
+{
+	background-color:Pink;
+}

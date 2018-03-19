@@ -1,0 +1,40 @@
+<head>
+<title>
+Vår hemsida
+</title>
+<link rel="stylesheet" type="text/css" href="test.css">
+<link rel="stylesheet" type="text/css" href="mainWindow.css">
+</head>
+<body class="GruppSelected">
+	<div id="mainBody">
+		<div id="menyRad">
+			<table id="menyRad_Table">
+				<tr>
+					<td id="Loga"  data="loga">
+						<a href="gruppfyra/index.html" class="clickable_menu_item" onclick="LoadNewPerson()" target="iFrame_a"><img src="Media/Gruppfyra.jpg" alt="Grupp 4 LOGA"></img></a>
+					</td>
+					<td id="Andreas_Antonsson" class="clickable_menu_item" data="Andreas Antonsson">
+						<a href="Andreas A/index.html" class="clickable_menu_item" onclick="LoadAndreas_A()" target="iFrame_a">Andreas A</a>
+					</td>
+					<td id="Andreas_Hellstrom" class="clickable_menu_item" width="100px">
+						<a href="Andreas H/index.html" class="clickable_menu_item" onclick="LoadAndreas_H()" target="iFrame_a">Andreas H</a>
+					</td>
+					<td id="Victor" class="clickable_menu_item">
+						<a href="Victor/index.html" class="clickable_menu_item" onclick="LoadVictor()" target="iFrame_a">Victor</a>
+					</td>
+					<td id="Jimmy" class="clickable_menu_item">
+						<a href="Jimmy/index.html" class="clickable_menu_item" onclick="LoadJimmy()" target="iFrame_a">Jimmy</a>
+					</td>
+					<script src="LoadNewPerson.js">
+					</script>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="FrameContent" height="600px" width="800px"> 
+			<iframe src="gruppfyra/index.html" height="100%" width="100%" name="iFrame_a"> </iframe>
+		</div>
+		
+	</div>
+
+</body>

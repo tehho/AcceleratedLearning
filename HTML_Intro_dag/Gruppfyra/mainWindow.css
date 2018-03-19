@@ -1,0 +1,13 @@
+body
+{
+}
+.background {
+	background-image: url("background.jpg");
+	background-size: cover;
+	min-width:800px;
+	min-height:900px;
+}
+th
+{
+	font-weight:bold;
+}
