@@ -9,13 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul2", "Modul2\Modul2.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul3", "Modul3\Modul3.csproj", "{80F49067-21C7-4780-8584-6952A787EC42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForModul3", "TestForModul3\TestForModul3.csproj", "{9ACCCF0C-AAEC-406A-8A1D-C13390DC629B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul4", "Modul4\Modul4.csproj", "{51F637CF-EAED-4E0D-9255-B517903DFAC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul4", "Modul4\Modul4.csproj", "{51F637CF-EAED-4E0D-9255-B517903DFAC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintLibrary", "PrintLibrary\PrintLibrary.csproj", "{776DB373-2CAA-4851-A5CC-71B738F290A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintLibrary", "PrintLibrary\PrintLibrary.csproj", "{776DB373-2CAA-4851-A5CC-71B738F290A5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul5", "Modul5\Modul5.csproj", "{D75EDBC0-9EC9-4770-A05A-6BEAD76DE6AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul5", "Modul5\Modul5.csproj", "{D75EDBC0-9EC9-4770-A05A-6BEAD76DE6AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +33,6 @@ Global
 		{80F49067-21C7-4780-8584-6952A787EC42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80F49067-21C7-4780-8584-6952A787EC42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80F49067-21C7-4780-8584-6952A787EC42}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9ACCCF0C-AAEC-406A-8A1D-C13390DC629B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9ACCCF0C-AAEC-406A-8A1D-C13390DC629B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9ACCCF0C-AAEC-406A-8A1D-C13390DC629B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9ACCCF0C-AAEC-406A-8A1D-C13390DC629B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{51F637CF-EAED-4E0D-9255-B517903DFAC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{51F637CF-EAED-4E0D-9255-B517903DFAC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51F637CF-EAED-4E0D-9255-B517903DFAC2}.Release|Any CPU.ActiveCfg = Release|Any CPU

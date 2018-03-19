@@ -11,18 +11,18 @@ namespace Modul2
         {
             WorkingWithDifferentTypes();
 
-            PressENTERToContinue();
+            PressToContinue();
         }
 
         static void StringCreation()
         {
-            List<string> fruits = GetFruits();
+            List<string> fruits = GetFruits(); //Fint
 
             PrintConcatenation(fruits);
 
             PrintUsingPlaceholders(fruits);
 
-            PrintInterpolation(fruits);
+            PrintInterpolation(fruits); //Bra
             
             int oranges = fruits.Count((fruit) => fruit.Equals("orange"));
 
@@ -45,7 +45,7 @@ namespace Modul2
 
         static void PrintUsingPlaceholders(List<string> fruits)
         {
-            string format = "You entered {0} fruits: {1}";
+            string format = "You entered {0} fruits: {1}"; //Bra
 
             PrintColor(String.Format(format, fruits.Count, String.Join(", ", fruits)), ConsoleColor.Green);
         }
@@ -181,7 +181,7 @@ namespace Modul2
             }
             else
             {
-                PrintColor("You are pretty special aren't you", ConsoleColor.Magenta);
+                PrintColor("You are pretty special aren't you", ConsoleColor.Magenta); //Snyggt!
             }
 
         }
@@ -191,7 +191,7 @@ namespace Modul2
             string name;
             int age;
 
-            char favoritLetter;
+            char favoritLetter; //Fint
 
             name = GetName();
             age = GetAge();
@@ -222,7 +222,7 @@ namespace Modul2
             do
             {
                 if (parsed)
-                    Console.Write("What's your age: ");
+                    Console.Write("What's your age: "); //Fint.
                 else
                     Console.Write("Please enter a correct age: ");
                 parsed = int.TryParse(Console.ReadLine(), out age);
@@ -243,6 +243,8 @@ namespace Modul2
 
 
             //Jag lägger till DarkRed och DarkYellow till färgerna
+
+            //TODO: Lägg till större spektrum av färger
             ConsoleColor[] rainbow = new ConsoleColor[] { ConsoleColor.DarkRed, ConsoleColor.Red, ConsoleColor.DarkYellow, ConsoleColor.Yellow, ConsoleColor.Green, ConsoleColor.Blue, ConsoleColor.DarkMagenta};
 
             int size = str.Length / rainbow.Length;
@@ -250,7 +252,7 @@ namespace Modul2
 
             if (overflow == 0)
             {
-                foreach (var item in rainbow)
+                foreach (var item in rainbow) //Smart
                 {
                     for (int i = 0; i < size; i++)
                     {
@@ -282,7 +284,7 @@ namespace Modul2
                     }
                 }
             }
-            PrintColor(str, colors.ToArray());
+            PrintColor(str, colors.ToArray()); //Kalas!
         }
 
         static void PrintColor(string str, ConsoleColor color)
@@ -309,11 +311,13 @@ namespace Modul2
             Console.WriteLine(str);
         }
 
-        static void PressENTERToContinue()
+        static void PressToContinue()
         {
 
-            Console.WriteLine("Press ENTER to continue...");
-            Console.ReadLine();
+                Console.WriteLine("\nPress any key to continue..."); //Fint
+                System.Threading.Thread.Sleep(999999); //Bra
+
         }
+
     }
 }
