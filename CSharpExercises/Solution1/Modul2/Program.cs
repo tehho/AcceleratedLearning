@@ -241,7 +241,9 @@ namespace Modul2
         {
             List<ConsoleColor> colors = new List<ConsoleColor>();
 
-            ConsoleColor[] rainbow = new ConsoleColor[] { ConsoleColor.Red, ConsoleColor.Yellow, ConsoleColor.Green, ConsoleColor.Blue, ConsoleColor.DarkMagenta};
+
+            //Jag lägger till DarkRed och DarkYellow till färgerna
+            ConsoleColor[] rainbow = new ConsoleColor[] { ConsoleColor.DarkRed, ConsoleColor.Red, ConsoleColor.DarkYellow, ConsoleColor.Yellow, ConsoleColor.Green, ConsoleColor.Blue, ConsoleColor.DarkMagenta};
 
             int size = str.Length / rainbow.Length;
             int overflow = str.Length % rainbow.Length;
