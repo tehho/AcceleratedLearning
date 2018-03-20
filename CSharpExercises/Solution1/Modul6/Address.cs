@@ -38,8 +38,7 @@ namespace Modul6
 
         public override string ToString()
         {
-            List<Tuple<string, int>> list =
-                new List<Tuple<string, int>>
+            List<Tuple<string, int>> list = new List<Tuple<string, int>>
                 {
                     new Tuple<string, int>("", 20),
                     new Tuple<string, int>("", 30)
@@ -51,18 +50,21 @@ namespace Modul6
         private static bool IsZipCode(string zipCode)
         {
             if (zipCode.Length != 6)
+            {
                 return false;
+            }
 
             if (zipCode.IndexOf(' ') != 3)
+            {
                 return false;
+            }
 
             foreach (var character in zipCode)
             {
-                if (character != ' ')
-                {
-                    if (character < '0' || character > '9')
-                        return false;
-                }
+                if (character == ' ') continue;
+
+                if (character < '0' || character > '9')
+                    return false;
             }
 
             return true;

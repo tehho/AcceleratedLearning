@@ -9,12 +9,12 @@ namespace Modul6
     {
         private readonly List<Tuple<string, int>> _headers;
 
-        public TableDisplayer(List<Tuple<string, int>> headerSetup)
+        public TableDisplayer(IEnumerable<Tuple<string, int>> headerSetup)
         {
-            _headers = headerSetup;
+            _headers = headerSetup.ToList();
         }
 
-        public TableDisplayer(List<string> headers)
+        public TableDisplayer(IEnumerable<string> headers)
         {
             _headers = new List<Tuple<string,int>>();
             foreach (var header in headers)
