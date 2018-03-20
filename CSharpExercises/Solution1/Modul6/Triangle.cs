@@ -8,25 +8,32 @@ namespace Modul6
         public override double Area { get { return (Bas * Height) / 2; } }
         public override double Circumfrens { get { return (Bas * Height) / 2; } }
 
-        public Triangle(string name, double sida1, double sida2, double sida3)
-            : base(name)
+        public Triangle(double x, double y, double bas, double height)
+            : base(x, y)
         {
-
+            Bas = bas;
+            Height = height;
+        }
+        public Triangle(Vector2 position, double bas, double height)
+            : base(position)
+        {
+            Bas = bas;
+            Height = height;
         }
 
         public override void SayHello()
         {
-            Console.WriteLine($"I'm a triangle with the name {Name}!");
+            Console.WriteLine($"I'm a triangle with the position {Position}, baseline {Math.Round(Bas,2)} and height {Math.Round(Height, 2)}!");
         }
 
         public override void WriteArea()
         {
-            Console.WriteLine($"My name is {Name}. I have base {Math.Round(Bas, 2)} and a height of {Math.Round(Height, 2)} and an area of {Math.Round(Area, 2)}.");
+            Console.WriteLine($"I have base {Math.Round(Bas, 2)} and a height of {Math.Round(Height, 2)} and an area of {Math.Round(Area, 2)}.");
         }
 
         public override void WriteCircumfrens()
         {
-            Console.WriteLine($"My name is {Name}. I have base {Math.Round(Bas, 2)} and a height of {Math.Round(Height, 2)} and an circumfrens of {Math.Round(Circumfrens, 2)}.");
+            Console.WriteLine($"I have base {Math.Round(Bas, 2)} and a height of {Math.Round(Height, 2)} and an circumfrens of {Math.Round(Circumfrens, 2)}.");
         }
     }
 }

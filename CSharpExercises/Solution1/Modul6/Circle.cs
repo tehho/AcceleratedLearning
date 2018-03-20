@@ -2,6 +2,7 @@
 
 namespace Modul6
 {
+
     public class Circle : Shape
     {
         public double Radius { get; set; }
@@ -14,28 +15,43 @@ namespace Modul6
         {
             Radius = 5.0;
         }
-        public Circle(string name)
-            : base(name)
+        public Circle(double x)
+            : base(x)
         {
             Radius = 5.0;
         }
-        public Circle(string name, double radius)
-            : base(name)
+        public Circle(double x, double y)
+            : base(x, y)
+        {
+            Radius = 5.0;
+        }
+        public Circle(double x, double y, double radius)
+            : base(x, y)
+        {
+            Radius = radius;
+        }
+        public Circle(Vector2 position)
+            : base(position)
+        {
+            Radius = 5.0;
+        }
+        public Circle(Vector2 position, double radius)
+            : base(position)
         {
             Radius = radius;
         }
 
         public override void SayHello()
         {
-            Console.WriteLine($"I'm a circle with the name {Name}!");
+            Console.WriteLine($"I'm a circle with the position {Position} and radius of {Math.Round((Radius), 2)}!");
         }
         public override void WriteArea()
         {
-            System.Console.WriteLine($"My name is {Name}. I have radius {Math.Round(Radius, 2)} and an area of {Math.Round(Area, 2)}.");
+            Console.WriteLine($"I have radius {Math.Round(Radius, 2)} and an area of {Math.Round(Area, 2)}.");
         }
         public override void WriteCircumfrens()
         {
-            System.Console.WriteLine($"My name is {Name}. I have radius {Math.Round(Radius, 2)} and an circumfrens of {Math.Round(Circumfrens, 2)}.");
+            Console.WriteLine($"I have radius {Math.Round(Radius, 2)} and an circumfrens of {Math.Round(Circumfrens, 2)}.");
         }
     }
 }

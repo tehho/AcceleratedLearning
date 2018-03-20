@@ -1,31 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Transactions;
 
 namespace Modul6
 {
-    class Program
+    internal partial class Program
     {
-        static void Main(string[] args)
-        {
-            List<Shape> list = new List<Shape>();
 
-            list.Add(new Circle("Bob", 8));
-            list.Add(new Circle("Lisa", 30));
-            list.Add(new Square("Bob", 8));
-            list.Add(new Square("Lisa", 30));
-            list.Add(new Triangle("Bob", 8));
-            list.Add(new Triangle("Lisa", 30));
+        private static void Main(string[] args)
+        {
+            var list = new List<Shape>
+            {
+                new Circle(1, 1, 8),
+                new Circle(new Vector2(2, 7), 30),
+                new Square(1, 2, 6, 8),
+                new Square(new Vector2(7), new Vector2(5, 7))
+            };
+
 
             ListSayHello(list);
 
             Console.WriteLine();
 
             ListWriteMath(list);
+
+            var cube = new Cube(2, 3, 4, ConsoleColor.Red);
+            PrintCube(cube);
             
             Console.ReadKey(); 
         }
 
-        static void ListSayHello(List<Circle> list)
+        private static void PrintCube(Cube cube)
+        {
+            Console.ForegroundColor = cube.Color;
+            Console.WriteLine($"Volume {Math.Round(cube.CalculateVolume(), 2)}");
+            Console.WriteLine($"Area {Math.Round(cube.CalculateArea(), 2)}");
+            Console.ResetColor();
+        }
+
+        private static void ListSayHello(List<Shape> list)
         {
             foreach (var item in list)
             {
@@ -33,7 +47,7 @@ namespace Modul6
             }
         }
 
-        static void ListWriteMath(List<Circle> list)
+        private static void ListWriteMath(List<Shape> list)
         {
             foreach (var item in list)
             {

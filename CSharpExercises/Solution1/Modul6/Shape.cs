@@ -1,18 +1,28 @@
-﻿namespace Modul6
+﻿using System;
+
+namespace Modul6
 {
     public abstract class Shape
     {
-        public string Name { get; set; }
+        public Vector2 Position { get; set; }
         public virtual double Area { get; }
         public virtual double Circumfrens { get; }
 
         public Shape()
         {
-            Name = "Unknown";
+            Position = new Vector2(0, 0);
         }
-        public Shape(string name)
+        public Shape(double x)
         {
-            Name = name;
+            Position = new Vector2(x, x);
+        }
+        public Shape(double x, double y)
+        {
+            Position = new Vector2(x, y);
+        }
+        public Shape(Vector2 position)
+        {
+            Position = position;
         }
 
 
