@@ -2,7 +2,6 @@
 
 namespace Modul6
 {
-
     public class Circle : Shape
     {
         public double Radius { get; set; }
