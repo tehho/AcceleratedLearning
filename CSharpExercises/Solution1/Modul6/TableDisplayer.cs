@@ -19,7 +19,7 @@ namespace Modul6
             _headers = new List<Tuple<string,int>>();
             foreach (var header in headers)
             {
-                _headers.Add(new Tuple<string, int>(header, header.Length));
+                _headers.Add(new Tuple<string, int>(header, Math.Max(header.Length, 3)));
             }
         }
 
