@@ -12,10 +12,9 @@ namespace Modul6
 
         private static void Main(string[] args)
         {
-
-
             try
             {
+                ElevatorTest();
             }
             catch (Exception e)
             {
@@ -43,7 +42,7 @@ namespace Modul6
                 catch (InvalidOperationException ioe)
                 {
                     Console.WriteLine(ioe.Message);
-                    e1.Report();
+                    Console.WriteLine(e1.Report());
                     e1.Repair(100);
                 }
                 catch( Exception e)

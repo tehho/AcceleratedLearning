@@ -54,7 +54,6 @@ namespace Modul6
             {
                 throw new InvalidOperationException($"Uses < 1, please Repair the elevator {Name}");
             }
-
             _uses--;
             CurrentFloor = floor;
         }
@@ -78,9 +77,9 @@ namespace Modul6
             }
         }
         
-        public void Report()
+        public string Report()
         {
-            Console.WriteLine(this);
+            return ToString();
         }
 
         public override string ToString()
