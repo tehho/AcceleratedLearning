@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Transactions;
 
 namespace Modul6
@@ -11,12 +12,52 @@ namespace Modul6
 
         private static void Main(string[] args)
         {
-            
+
+
+            try
+            {
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
+
+            Console.ReadKey();
+        }
+
+        void ChoklateTest()
+        {
+
+        }
+
+        private static void ElevatorTest()
+        {
+            var e1 = new Elevator("Kalle", 0, 10, 10);
+            for (int i = 0; i < 1000; i++)
+            {
+                try
+                {
+                    e1.GoDown();
+                }
+                catch (InvalidOperationException ioe)
+                {
+                    Console.WriteLine(ioe.Message);
+                    e1.Report();
+                    e1.Repair(100);
+                }
+                catch( Exception e)
+                {
+                    throw e;
+                }
+            }
+        }
+
+        private static void AddressTest()
+        {
             Address adress = new Address("Enbärsvägen", 71, "448 37", "Floda");
             Console.WriteLine(adress);
             Console.WriteLine(adress.GetFullAddress());
-
-            Console.ReadKey(); 
         }
 
         private static void PersonTest()

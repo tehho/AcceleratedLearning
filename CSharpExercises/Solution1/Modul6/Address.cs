@@ -40,10 +40,15 @@ namespace Modul6
         {
             List<Tuple<string, int>> list = new List<Tuple<string, int>>
                 {
-                    new Tuple<string, int>("", 20),
+                    new Tuple<string, int>("", 10),
                     new Tuple<string, int>("", 30)
                 };
-            
+
+            var list2 = new List<string>();
+            list2.Add("Street");
+            list2.Add(_streetName);
+            new TableDisplayer(list).CreateRow(list2);
+
             return new TableDisplayer(list).CreateTable($"Street,{_streetName}\nStreetNumber,{_streetNumber}\nCity,{_city}\nZipCode,{ZipCode}".Split("\n").ToList());
         }
 

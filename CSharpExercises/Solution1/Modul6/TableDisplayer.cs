@@ -51,13 +51,13 @@ namespace Modul6
             return ret;
         }
 
-        public string CreateTable(IEnumerable<string> str)
+        public string CreateTable(IEnumerable<string> str, string seperator = ",")
         {
             string ret = CreateRow(_headers.Select((item) => item.Item1));
 
             foreach (var item in str)
             {
-                ret += CreateRow(item.Split(","));
+                ret += CreateRow(item.Split(seperator));
             }
 
             return ret;
